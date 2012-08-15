@@ -9,13 +9,17 @@ We'll be using:
 * BackboneJS
 * RequireJS
 
-1) Download https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip and extract
-2) Created & Test local site, for example: http://fueljs.lo
-3) FuelPHP includes Bootstrap, removed the following files:
+* Download https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip and extract
+    * https://github.com/jsidhu/FuelJS/tree/d5b9505a4ca0290ca46a3a3de0c7616bf90e21b3
+* run 'php oil refine install'
+* Create & Test local site, for example: http://fueljs.lo
+    * you should see the standard FuelPHP Welcome page
+* FuelPHP includes an older version of Bootstrap, I removed the following files:
     Delete public/assets/js/bootstrap.js
    	Delete public/assets/css/bootstrap.css
    	Delete public/assets/css/bootstrap-LICENSE
-4) Download Bootstrap from http://twitter.github.com/bootstrap/assets/bootstrap.zip and move the files:
+* Create the libs folder: public/assets/js/libs
+* Download Bootstrap from http://twitter.github.com/bootstrap/assets/bootstrap.zip and move the files:
 	* Copy css/bootstrap-responsive.css to public/assets/css/
 	* Copy css/bootstrap-responsive.min.css to public/assets/css/
 	* Copy css/bootstrap.css to public/assets/css/
@@ -24,12 +28,15 @@ We'll be using:
 	* Copy img/glyphicons-halflings.png to public/assets/img/glyphicons-halflings.png
 	* Copy js/bootstrap.js to /public/assets/js/libs/
 	* Copy js/bootstrap.min.js to /public/assets/js/libs/
-* Download require.js and put it in /public/assets/js/libs/
-* Download the text plugin for require.js and put it in /public/assets/js/libs/
-* Download backbone.js and put it in /public/assets/js/libs/
-* Download underscore.js and put it in /public/assets/js/libs/
-* Download jquery.js and put it in /public/assets/js/libs/
-* Download json2.js and put it in /public/assets/js/libs/
+
+* Download require.js from http://requirejs.org/docs/release/2.0.5/comments/require.js and put it in /public/assets/js/libs/
+* Download the text plugin from https://raw.github.com/requirejs/text/latest/text.js for require.js and put it in /public/assets/js/libs/
+* Download backbone.js from http://backbonejs.org/backbone.js and put it in /public/assets/js/libs/
+* Download underscore.js from http://underscorejs.org/underscore.js and put it in /public/assets/js/libs/
+* Download jquery.js from http://code.jquery.com/jquery-1.8.0.js and put it in /public/assets/js/libs/
+* Download json2.js from https://raw.github.com/douglascrockford/JSON-js/master/json2.js and put it in /public/assets/js/libs/
+
+### Check - Make sure nothing broke, here's my code upto this point: 
 
 ** Stackoverflow article/question on how to use Require.js with Backbone and other global libs
 ** http://stackoverflow.com/questions/10866740/loading-jquery-underscore-and-backbone-using-requirejs-2-0-1-and-shim
