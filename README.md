@@ -12,10 +12,10 @@ We'll be using:
 ***
 
 **Start**
-* Step one is to download Download https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip and extract
-* run 'php oil refine install'
-* Create & Test local site, for example: http://fueljs.lo
- * you should see the standard FuelPHP Welcome page
++ Step one is to download Download https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip and extract
++ run 'php oil refine install'
++ Create & Test local site, for example: http://fueljs.lo
+ - you should see the standard FuelPHP Welcome page
 
 #### Checkpoint: https://github.com/jsidhu/FuelJS/tree/d5b9505a4ca0290ca46a3a3de0c7616bf90e21b3
 
