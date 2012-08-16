@@ -10,7 +10,8 @@ We'll be using:
 * RequireJS
 
 * Download https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip and extract
-    * https://github.com/jsidhu/FuelJS/tree/d5b9505a4ca0290ca46a3a3de0c7616bf90e21b3
+## Checkpoint: https://github.com/jsidhu/FuelJS/tree/d5b9505a4ca0290ca46a3a3de0c7616bf90e21b3
+
 * run 'php oil refine install'
 * Create & Test local site, for example: http://fueljs.lo
     * you should see the standard FuelPHP Welcome page
@@ -36,7 +37,7 @@ We'll be using:
 * Download jquery.js from http://code.jquery.com/jquery-1.8.0.js and put it in /public/assets/js/libs/
 * Download json2.js from https://raw.github.com/douglascrockford/JSON-js/master/json2.js and put it in /public/assets/js/libs/
 
-### Check - Make sure nothing broke, here's my code upto this point: https://github.com/jsidhu/FuelJS/tree/15b719820457f1c293294c263cb7aa952ec27c36
+## Checkpoint: https://github.com/jsidhu/FuelJS/tree/15b719820457f1c293294c263cb7aa952ec27c36
 
 * Configure FuelPHP, edit fuel/app/config/config.php and change:
     * 'index_file'  => false,
@@ -78,5 +79,6 @@ We'll be using:
 
 * Now test, you should get the /login view asking you to login with a username and password. Login using admin/admin will work but you will end up at a non-working page.
 
+## Checkpoint: https://github.com/jsidhu/FuelJS/tree/cc71e41e8fc560a913b995cf385f727e6e2d0008
 
-### Finalize
+### Javascript everything
