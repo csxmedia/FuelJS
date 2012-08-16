@@ -27,23 +27,23 @@ We begin by installing setting up FuelPHP:
     * Delete ```public/assets/js/bootstrap.js```
    	* Delete ```public/assets/css/bootstrap.css```
    	* Delete ```public/assets/css/bootstrap-LICENSE```
-* Create the libs folder: public/assets/js/libs
-* Download Bootstrap from http://twitter.github.com/bootstrap/assets/bootstrap.zip and move the files:
-	* Copy css/bootstrap-responsive.css to public/assets/css/
-	* Copy css/bootstrap-responsive.min.css to public/assets/css/
-	* Copy css/bootstrap.css to public/assets/css/
-	* Copy css/bootstrap.min.css to public/assets/css/
-	* Copy img/glyphicons-halflings-white.png to public/assets/img/glyphicons-halflings-white.png
-	* Copy img/glyphicons-halflings.png to public/assets/img/glyphicons-halflings.png
-	* Copy js/bootstrap.js to /public/assets/js/libs/
-	* Copy js/bootstrap.min.js to /public/assets/js/libs/
+* Create the libs folder: ```public/assets/js/libs```
+* Download Bootstrap from <http://twitter.github.com/bootstrap/assets/bootstrap.zip> and move the files:
+	* Copy ```css/bootstrap-responsive.css``` to ```public/assets/css/```
+	* Copy ```css/bootstrap-responsive.min.css``` to ```public/assets/css/```
+	* Copy ```css/bootstrap.css``` to ```public/assets/css/```
+	* Copy ```css/bootstrap.min.css``` to ```public/assets/css/```
+	* Copy ```img/glyphicons-halflings-white.png``` to ```public/assets/img/glyphicons-halflings-white.png```
+	* Copy ```img/glyphicons-halflings.png``` to ```public/assets/img/glyphicons-halflings.png```
+	* Copy ```js/bootstrap.js``` to ```/public/assets/js/libs/```
+	* Copy ```js/bootstrap.min.js``` to ```/public/assets/js/libs/```
 
-* Download require.js from http://requirejs.org/docs/release/2.0.5/comments/require.js and put it in /public/assets/js/libs/
-* Download the text plugin from https://raw.github.com/requirejs/text/latest/text.js for require.js and put it in /public/assets/js/libs/
-* Download backbone.js from http://backbonejs.org/backbone.js and put it in /public/assets/js/libs/
-* Download underscore.js from http://underscorejs.org/underscore.js and put it in /public/assets/js/libs/
-* Download jquery.js from http://code.jquery.com/jquery-1.8.0.js and put it in /public/assets/js/libs/
-* Download json2.js from https://raw.github.com/douglascrockford/JSON-js/master/json2.js and put it in /public/assets/js/libs/
+* Download ```require.js``` from <http://requirejs.org/docs/release/2.0.5/comments/require.js> and put it in ```/public/assets/js/libs/```
+* Download the plugin ```text.js``` from <https://raw.github.com/requirejs/text/latest/text.js> for ```require.js``` and put it in ```/public/assets/js/libs/```
+* Download ```backbone.js``` from <http://backbonejs.org/backbone.js> and put it in ```/public/assets/js/libs/```
+* Download ```underscore.js``` from <http://underscorejs.org/underscore.js> and put it in ```/public/assets/js/libs/```
+* Download ```jquery.js``` from <http://code.jquery.com/jquery-1.8.0.js> and put it in ```/public/assets/js/libs/```
+* Download ```json2.js``` from <https://raw.github.com/douglascrockford/JSON-js/master/json2.js> and put it in ```/public/assets/js/libs/```
 
 #### Checkpoint: https://github.com/jsidhu/FuelJS/tree/15b719820457f1c293294c263cb7aa952ec27c36
 
