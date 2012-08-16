@@ -20,7 +20,6 @@
             background-color: white;
             background-repeat: repeat-x;
             background-position: 0 40px;
-
         }
         .sidebar-nav {
             padding: 9px 0;
