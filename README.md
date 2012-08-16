@@ -6,20 +6,21 @@ A boilerplate to build Javascript / REST Applications with FuelPHP + MySQL as th
 We'll be using:
 
 * FuelPHP 1.2.1
-* BackboneJS
-* RequireJS
+* BackboneJS (+ Underscore + json2)
+* RequireJS + Text Plugin
+* jQuery
+* Bootstrap by Twitter
 
 ***
 
 **Start**
-+ Step one is to download Download https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip and extract
-+ run 'php oil refine install'
-+ Create & Test local site, for example: http://fueljs.lo
- - you should see the standard FuelPHP Welcome page
++* Step one is to download Download https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip and extract
+* run 'php oil refine install'
+* Create & Test local site, for example: http://fueljs.lo - you should see the standard FuelPHP Welcome page
 
 #### Checkpoint: https://github.com/jsidhu/FuelJS/tree/d5b9505a4ca0290ca46a3a3de0c7616bf90e21b3
 
-* FuelPHP includes an older version of Bootstrap, I removed the following files:
+* FuelPHP includes an older version of Bootstrap which we'll replace. I removed the following files:
     Delete public/assets/js/bootstrap.js
    	Delete public/assets/css/bootstrap.css
    	Delete public/assets/css/bootstrap-LICENSE
