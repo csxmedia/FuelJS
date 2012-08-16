@@ -47,14 +47,14 @@ We'll be using:
 * Configure FuelPHP, edit fuel/app/config/config.php and change:
     * 'index_file'  => false,
     * 'default_timezone'   => 'America/Los_Angeles',   Find it here: http://php.net/manual/en/timezones.php
-    * Enable the auth package by editing fuel/app/config/config.php and add 'auth' to the packages array
-    * Enable the orm package by editing fuel/app/config/config.php and add 'orm' to the packages array
+    * Enable the auth package by adding 'auth' to the packages array
+    * Enable the orm package by adding 'orm' to the packages array
     * Update Database config by editing fuel/app/config/development/db.php
 
 ### SimpleAuth - http://docs.fuelphp.com/packages/auth/intro.html
 * Copy fuel/packages/auth/config/auth.php to fuel/app/config/auth.php and make changes (update the salt?)
 * Copy fuel/packages/auth/config/simpleauth.php to fuel/app/config/simpleauth.php and customize if desired
-* Copy:
+* Copy SimpleAuth fro packages over to our app so we can customize it if required:
     * fuel/packages/auth/classes/auth/acl/simpleacl.php -> fuel/app/classes/auth/acl/simpleacl.php
     * fuel/packages/auth/classes/auth/group/simplegroup.php -> fuel/app/classes/auth/group/simplrgroup.php
     * fuel/packages/auth/classes/auth/login/simpleauth.php -> fuel/app/classes/auth/login/simplegroup.php
@@ -63,7 +63,7 @@ We'll be using:
 * Create fuel/app/classes/model/user.php
 * Create the migration:fuel/app/migrations/001_create_users.php
 * Create the database!
-* Run the migration: php oil refine migrate
+* Run the migration: php oil refine migrate (this will add an admin/admin account)
 
 ### SimpleAuth Continued
 * Add a Common Controller - fuel/app/classes/controller/common.php
@@ -81,9 +81,11 @@ We'll be using:
     * 'login'   => 'site/login',   // login page
     * 'logout'   => 'site/logout', // logout
     * 'check'   => 'site/check',   // checks a posted username/password
-
+    
 * Now test, you should get the /login view asking you to login with a username and password. Login using admin/admin will work but you will end up at a non-working page.
 
 #### Checkpoint: https://github.com/jsidhu/FuelJS/tree/cc71e41e8fc560a913b995cf385f727e6e2d0008
 
 ### Javascript everything
+
+
