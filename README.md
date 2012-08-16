@@ -14,7 +14,7 @@ We'll be using:
 ***
 
 **Start**
-+* Step one is to download Download https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip and extract
+* Step one is to download Download https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip and extract
 * run 'php oil refine install'
 * Create & Test local site, for example: http://fueljs.lo - you should see the standard FuelPHP Welcome page
 
@@ -81,7 +81,7 @@ We'll be using:
     * 'login'   => 'site/login',   // login page
     * 'logout'   => 'site/logout', // logout
     * 'check'   => 'site/check',   // checks a posted username/password
-    
+
 * Now test, you should get the /login view asking you to login with a username and password. Login using admin/admin will work but you will end up at a non-working page.
 
 #### Checkpoint: https://github.com/jsidhu/FuelJS/tree/cc71e41e8fc560a913b995cf385f727e6e2d0008
