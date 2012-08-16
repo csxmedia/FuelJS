@@ -1,32 +1,29 @@
-# FuelJS
+FuelJS
+======
 
-This is the documentation of a boilerplate framework I've used a few times now to build Javascript based REST Applications with a FuelPHP + Mysql backend. Here's a list of what we'll be using:
+A boilerplate to build Javascript / REST Applications with FuelPHP + MySQL as the backend
+
+We'll be using:
 
 * FuelPHP 1.2.1
-* BackboneJS
-* Underscore
-* json2
+* BackboneJS (+ Underscore + json2)
 * RequireJS + Text Plugin
 * jQuery
 * Bootstrap by Twitter
-* MySQL
 
 ***
 
-###Lets get started!
+**Start**
+* Step one is to download Download https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip and extract
+* run 'php oil refine install'
+* Create & Test local site, for example: http://fueljs.lo - you should see the standard FuelPHP Welcome page
 
-We begin by installing setting up FuelPHP:
-
-* Download & Setup your project: <https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip>  
-* run ```php oil refine install```  
-* Create & Test local site, for example: http://fueljs.lo - you should see the standard FuelPHP Welcome page  
-
-**Checkpoint: <https://github.com/jsidhu/FuelJS/tree/d5b9505a4ca0290ca46a3a3de0c7616bf90e21b3>**
+#### Checkpoint: https://github.com/jsidhu/FuelJS/tree/d5b9505a4ca0290ca46a3a3de0c7616bf90e21b3
 
 * FuelPHP includes an older version of Bootstrap which we'll replace. I removed the following files:
-    * Delete ```public/assets/js/bootstrap.js```
-   	* Delete ```public/assets/css/bootstrap.css```
-   	* Delete ```public/assets/css/bootstrap-LICENSE```
+    Delete public/assets/js/bootstrap.js
+   	Delete public/assets/css/bootstrap.css
+   	Delete public/assets/css/bootstrap-LICENSE
 * Create the libs folder: public/assets/js/libs
 * Download Bootstrap from http://twitter.github.com/bootstrap/assets/bootstrap.zip and move the files:
 	* Copy css/bootstrap-responsive.css to public/assets/css/
