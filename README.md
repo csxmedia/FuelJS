@@ -15,7 +15,7 @@ This is the documentation of a boilerplate framework I've used a few times now t
 
 ###Lets get started!
 
-* We begin by installing setting up FuelPHP:
+* We begin by installing setting up FuelPHP:  
 >
 	* Download & Setup your project: <https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip>  
 	* run `php oil refine install` 
