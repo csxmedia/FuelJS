@@ -11,7 +11,7 @@ We'll be using:
 
 ***
 
-## Start
+**Start**
 * Step one is to download Download https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip and extract
 * run 'php oil refine install'
 * Create & Test local site, for example: http://fueljs.lo
