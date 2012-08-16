@@ -70,6 +70,7 @@ We'll be using:
 * Add a new method to site controller, action_login in fuel/app/classes/controller/site.php
 * Add a new view, fuel/app/views/site/login.php
 * Add a new route by editing fuel/app/config/routes.php: 'login'   => 'site/login',
+* Add a new user controller by adding fuel/app/classes/controller/user.php
 
 ### Views
 * Add a new controller by creating a new file: fuel/app/classes/controller/site.php
@@ -79,13 +80,30 @@ We'll be using:
 * Add/Update the routes by editing fuel/app/config/routes.php:
     * '_root_'  => 'site/index',   // The default route
     * 'login'   => 'site/login',   // login page
-    * 'logout'   => 'site/logout', // logout
-    * 'check'   => 'site/check',   // checks a posted username/password
+    * 'logout'  => 'site/logout', // logout
+    * 'check'   => 'user/check',   // checks a posted username/password
 
 * Now test, you should get the /login view asking you to login with a username and password. Login using admin/admin will work but you will end up at a non-working page.
 
 #### Checkpoint: https://github.com/jsidhu/FuelJS/tree/cc71e41e8fc560a913b995cf385f727e6e2d0008
 
 ### Javascript everything
+* The views that we added for the site controller (index & login) call requirejs to either load login.js or main.js (located in public/assets/js)
+    * The login.js file is used to handle the login attempts from the login view
+    * The main.js file is the main entrypoint of our application.
+* Add Desktop Application @ public/assets/js/desktop_app.js
+* Add Desktop Router @ public/assets/js/desktop_router.js
+* Add the user model: /public/assets/js/models/user.js
+* Add the Views to public/assets/js/views
+    * /desktop/dashboard/main.js
+    * /desktop/home/main.js
+    * /session.js
+* Add the templates: public/assets/templates/desktop
+    * dashboard/main.html
+    * dashboard/sidebar.html
+    * dashboard/topbar.html
+    * home/main.html
+    * home/sidebar.html
+    * home/topbar.html
 
-
+Thats it, should be working.

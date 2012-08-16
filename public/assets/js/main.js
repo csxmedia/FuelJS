@@ -18,7 +18,7 @@ requirejs.config({
 });
 
 
-define(['libs/backbone'], function () {
+define(['backbone'], function () {
         Backbone.emulateJSON = true;
         require([
             'desktop_app'

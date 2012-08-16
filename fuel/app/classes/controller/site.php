@@ -11,33 +11,15 @@ class Controller_Site extends Controller_Common
 
     public function action_login()
     {
-        $data = array();
+        // Render the login page
         $this->template->title = 'Please Login';
-        $this->template->content = View::forge('site/login', $data);
+        $this->template->content = View::forge('site/login', array());
     }
 
     public function action_logout()
     {
-        Log::debug('Logout');
+        // Logout user and redirect to front page
         Auth::instance()->logout();
         Response::redirect('/');
-    }
-
-    public function post_check()
-    {
-        $username = html_entity_decode(Input::post('username'));
-        $password = html_entity_decode(Input::post('password'));
-
-        $auth = Auth::instance();
-        if($auth->login($username, $password))
-        {
-            $this->response(array('valid' => true, 'redirect' => '/'), 200);
-        }
-        else
-        {
-            $this->response(array('valid' => false, 'error' => 'Invalid user name or password, please try again'), 200);
-        }
-        // sleep to slow down brute force attempts?
-        sleep(1);
     }
 }

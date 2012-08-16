@@ -16,14 +16,13 @@ requirejs.config({
     }
 });
 
-
 define(['backbone'], function () {
         if (
                 navigator.userAgent.match(/Android/i) ||
-                navigator.userAgent.match(/webOS/i) ||
-                navigator.userAgent.match(/iPhone/i) ||
-                navigator.userAgent.match(/iPod/i) ||
-                navigator.userAgent.match(/iPad/i) ||
+                navigator.userAgent.match(/webOS/i)   ||
+                navigator.userAgent.match(/iPhone/i)  ||
+                navigator.userAgent.match(/iPod/i)    ||
+                navigator.userAgent.match(/iPad/i)    ||
                 navigator.userAgent.match(/BlackBerry/)
             ) {
             // Launch the mobile site
@@ -33,22 +32,19 @@ define(['backbone'], function () {
             //console.log('Desktop Browser: ' + navigator.userAgent);
         }
 
-
         $(document).ready(function()
         {
 
 
             $('#username').focus();
-            //console.log('document is ready, login page');
-            $('#login_button').click(function() {
-                //debugger;
+            $('#login_button').click(function()
+            {
                 $('#login_button').attr("disabled", "disabled");
                 $('#login_button').attr("value", "Checking...");
                 username = $('#username')[0].value;
                 password = $('#password')[0].value;
                 /*****************************************************/
                 var target = '/check';
-                // Request
                 var data = {
                     username: username,
                     password: password
@@ -65,16 +61,10 @@ define(['backbone'], function () {
                         if (data.valid)
                         {
                             $('#login_button').removeAttr("disabled");
-                            //console.log("DATA");
-                            //console.log(data);
                             document.location.href = data.redirect;
                         }
                         else
                         {
-                            // Message
-                            // data.error || 'An unexpected error occured, please try again', {type: 'error'});
-                            // submitBt.enableBt();
-
                             $('#login_button').attr("value", "Failed!").addClass('btn-danger');
                             setTimeout(function() {
                                 $('#login_button').removeClass('btn-danger');
@@ -95,10 +85,8 @@ define(['backbone'], function () {
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown)
                     {
-                        // Message
-                        //$('#login-block').removeBlockMessages().blockMessage('Error while contacting server, please try again', {type: 'error'});
+                        // TODO: handle the login error properly
                         console.log("Error: " + errorThrown);
-                        //submitBt.enableBt();
                     }
                 });
                 /*****************************************************/
