@@ -1,20 +1,47 @@
 #FuelJS
 
-This is the documentation of a boilerplate framework I've used a few times now to build Javascript based REST Applications with a FuelPHP + Mysql backend. Here's a list of what we'll be using:
+##Documentation
 
-* FuelPHP 1.2.1  
- * BackboneJS  
-Underscore  
-json2  
-RequireJS
-Text Plugin
-jQuery
-Bootstrap by Twitter  
-MySQL  
+FuelPHP is sweet. Backbone.JS is sweet. RequireJS is pretty sweet too. Bootstrap is awesome, right? Well, if you've ever wanted to play around with a one-page website then you're in the right place. This little doc will get you started with a ready to go project.
+
+I've created a few small projects with FuelPHP + Backbone and the foundation is always the same: Add FuelPHP + MySQL + a few Javascript Libs. Then you've got to create the user model, create the controllers & views, add authentication, create the migration, write the javascript stuff to start the applciation, etc etc. Well, most of the projects upto the user authentication are almost always identicle. So, I've got a minimal working setup and am going talk about it here. 
+
+Here's a list of what we'll be using:
+
+* [FuelPHP](http://fuelphp.com/) v1.2.1
+* [Backbone](http://backbonejs.org/) v0.9.2
+* [Underscore](http://documentcloud.github.com/underscore/) v1.3.3
+* [json2](https://github.com/douglascrockford/JSON-js)
+* [RequireJS](http://requirejs.org/) v2.0.5
+* [Text Plugin](http://requirejs.org/docs/download.html#text)
+* [jQuery](http://jquery.com/) v1.8.0
+* [Bootstrap](http://twitter.github.com/bootstrap/) v2.0.4
+* [MySQL](http://mysql.com/)
+ 
+I've divided up this project into four main parts, here's a small description of what I intend to capture at each stage
+
+* Part 1 - The Project - This step establishes the base of our project. Download & Configure FuelPHP,  add the CSS and JS libs and other helper files.
+* Part 2 - The Backend - We configure FuelPHP, add the controllers and views required to render our site
+* Part 3 - The Frontend - This is where most of the JS magic happens. I've isolated all of the Javascript out to this section and I'm guessing a large writeup will be dedicated to it.
+* Part 4 - The Database - Here we finalize our system, create the tables and populate is using FuelPHP Migrations
+
+##Part 1: The Project
+Not a lot needs to be said in this part I think. You can read up on how to setup & install FuelPHP [here](http://docs.fuelphp.com/). We begin by removing the older version of Bootstrap files as described below: 
+>* Delete `public/assets/js/bootstrap.js`
+>* Delete `public/assets/css/bootstrap.css`
+>* Delete `public/assets/css/bootstrap-LICENSE`
+
+##Part 2: The Backend
+The backend consists of the following pieces:
+* the common controller: `fuel/app/classes/controller/common.php`
+* the site controller: 
+##Part 3: The Frontend
+##Part 4: The Database
 
 
 ****
 ****
+#How to reproduce this project from scratch:
 
 ##Part 1: The Project
 
@@ -116,27 +143,3 @@ MySQL
 Thats it.
 -----
 
-#Documentation
-
-I've used this formula for a few side projects now and everytime I've had to piece together the basic steps of starting a new project. Well, no more! I've documented the steps and dumped my thoughts on what I've done and why I've done it. Almoat all of my projects share these basic things: FuelPHP, MySQL, Backbone, Jquery, Bootstrap, etc.
-
-This prject here is intended to be a Boilerplate example of how to setup a project. I hate the boilerplate nametag being used here as much as anyon, but the project itself isn't intended to be one. Whats important here is that I've documented the steps required to setup this kind of a project and explained my intentions as well as the decisions made.  'm not a developer by trade so the loss of knowledge is quite common for me as I switch back and forth from my usual role to a develper role. 
-
-I've divided up this project into four main parts, here's a small description of what I intend to capture at each stage
-
-* Part 1 - The Project - This step establishes the base of our project. FuelPHP is downloaded and configured to run in your environment. We add the CSS and JS libs and other helper files that we'll be using/
-* Part 2 - The Backend - We configure FuelPHP, add the controllers and views required to render our site
-* Part 3 - The Frontend - This is where most of the JS magic happens. I've isolated all of the Javascript out to this section and I'm guessing a large writeup will be dedicated to it.
-* Part 4 - The Database - Here we finalize our system, create the tables and populate is using FuelPHP Migrations
-
-##Part 1: The Project
-##Part 2: The Backend
-##Part 3: The Frontend
-##Part 4: The Database
-
-## The Backend
-The backend consists of the following pieces:
-* the common controller: `fuel/app/classes/controller/common.php`
-* the site controller: 
-
-## The Frontend
