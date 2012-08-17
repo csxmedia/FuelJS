@@ -1,33 +1,34 @@
-# FuelJS
+#FuelJS
 
 This is the documentation of a boilerplate framework I've used a few times now to build Javascript based REST Applications with a FuelPHP + Mysql backend. Here's a list of what we'll be using:
 
-* FuelPHP 1.2.1
-* BackboneJS
-* Underscore
-* json2
-* RequireJS + Text Plugin
-* jQuery
-* Bootstrap by Twitter
-* MySQL
+* FuelPHP 1.2.1  
+ * BackboneJS  
+Underscore  
+json2  
+RequireJS
+Text Plugin
+jQuery
+Bootstrap by Twitter  
+MySQL  
 
-***
 
-###Lets get started!
+****
+****
+
+##Part 1: The Project
 
 * We begin by installing setting up FuelPHP:
-	* Download & Setup your project: <https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip>  
+	* Download & Setup your project: [FuelPhp v1.2.1](https://github.com/downloads/fuel/fuel/fuelphp-1.2.1.zip)  
 	* run `php oil refine install` 
 	* Create & Test local site, for example: http://fueljs.lo - you should see the standard FuelPHP Welcome page    
-
-**Checkpoint: <https://github.com/jsidhu/FuelJS/tree/d5b9505a4ca0290ca46a3a3de0c7616bf90e21b3>**
 
 * FuelPHP includes an older version of Bootstrap which we'll replace. I removed the following files:
 	* Delete `public/assets/js/bootstrap.js`
 	* Delete `public/assets/css/bootstrap.css`
 	* Delete `public/assets/css/bootstrap-LICENSE`
 
-* Download Bootstrap from <http://twitter.github.com/bootstrap/assets/bootstrap.zip> and move the files:
+* Download [Bootstrap](http://twitter.github.com/bootstrap/assets/bootstrap.zip) and move the files:
  	* Copy `css/bootstrap-responsive.css` to `public/assets/css/`
 	* Copy `css/bootstrap-responsive.min.css` to `public/assets/css/`
 	* Copy `css/bootstrap.css` to `public/assets/css/`
@@ -37,22 +38,20 @@ This is the documentation of a boilerplate framework I've used a few times now t
 	
 * Add the Javascript libraries
 	* Create the js/libs folder: `public/assets/js/libs`
-	* Copy `js/bootstrap.js` to `/public/assets/js/libs/`
-	* Download `require.js` from <http://requirejs.org/docs/release/2.0.5/comments/require.js> and put it in `/public/assets/js/libs/`
-	* Download the plugin `text.js` from <https://raw.github.com/requirejs/text/latest/text.js> for `require.js` and put it in `/public/assets/js/libs/`
-	* Download `backbone.js` from <http://backbonejs.org/backbone.js> and put it in `/public/assets/js/libs/`
-	* Download `underscore.js` from <http://underscorejs.org/underscore.js> and put it in `/public/assets/js/libs/`
-	* Download `jquery.js` from <http://code.jquery.com/jquery-1.8.0.js> and put it in `/public/assets/js/libs/`
-	* Download `json2.js` from <https://raw.github.com/douglascrockford/JSON-js/master/json2.js> and put it in `/public/assets/js/libs/`
-
-**Checkpoint: <https://github.com/jsidhu/FuelJS/tree/15b719820457f1c293294c263cb7aa952ec27c36>**
+	* From Bootstrap downloaded earlier, copy `js/bootstrap.js` to `/public/assets/js/libs/`
+	* Download [require.js](http://requirejs.org/docs/release/2.0.5/comments/require.js) and put it in `/public/assets/js/libs/`
+	* Download the plugin [text.js](https://raw.github.com/requirejs/text/latest/text.js) and put it in `/public/assets/js/libs/`
+	* Download [backbone.js](http://backbonejs.org/backbone.js) and put it in `/public/assets/js/libs/`
+	* Download [underscore.js](http://underscorejs.org/underscore.js) and put it in `/public/assets/js/libs/`
+	* Download [jquery.js](http://code.jquery.com/jquery-1.8.0.js) and put it in `/public/assets/js/libs/`
+	* Download [json2.js](https://raw.github.com/douglascrockford/JSON-js/master/json2.js) and put it in `/public/assets/js/libs/`
 
 * Configure FuelPHP, edit `fuel/app/config/config.php` and change:
 	* Remove/hide index.php from url: `'index_file' => false,`
-	* Update the timezone, see <http://php.net/manual/en/timezones.php>: `'default_timezone'   => 'America/Los_Angeles',`  	
-	* Enable the auth by adding `auth` to the `packages` array
-	* Enable the orm by adding `orm` to the `packages` array
-	* Update Database config by editing `fuel/app/config/development/db.php`
+	* Update the [timezone](http://php.net/manual/en/timezones.php): `'default_timezone'   => 'America/Los_Angeles',`  	
+	* Enable the **auth** by adding `auth` to the `packages` array
+	* Enable the **orm** by adding `orm` to the `packages` array
+	* Update database config by editing `fuel/app/config/development/db.php`
 
 **SimpleAuth** See the following link for more information: <http://docs.fuelphp.com/packages/auth/intro.html>  
 
@@ -63,20 +62,14 @@ This is the documentation of a boilerplate framework I've used a few times now t
     	* Copy `fuel/packages/auth/classes/auth/acl/simpleacl.php` to `fuel/app/classes/auth/acl/simpleacl.php`
     	* Copy `fuel/packages/auth/classes/auth/group/simplegroup.php` to `fuel/app/classes/auth/group/simplrgroup.php`
     	* Copy `fuel/packages/auth/classes/auth/login/simpleauth.php` to `fuel/app/classes/auth/login/simplegroup.php`
+    	
+****
+****
 
-**ORM (Object Relational Mapper):** <http://docs.fuelphp.com/packages/orm/intro.html>
-
-* I'm going to be using the ORM package provided by FuelPHP:
-	* Create the user model: `fuel/app/classes/model/user.php`
-	* Create the migration: `fuel/app/migrations/001_create_users.php`
-
-* Create the Database and populate it:
-	* Create the database, this step is manual: Login to mysql and create database
-	* Run the migration: `php oil refine migrate` (this will add an `admin/admin` account)
-
-### The backend
+##Part 2: The Backend
 
 * Lets setup the FuelPHP backend:
+	* Create the user model: `fuel/app/classes/model/user.php`
 	* Create a `Common` controller: `fuel/app/classes/controller/common.php`
 	* Add a new user controller by adding `fuel/app/classes/controller/user.php`
 	* Add a new controller: `fuel/app/classes/controller/site.php`
@@ -89,10 +82,10 @@ This is the documentation of a boilerplate framework I've used a few times now t
     	* `'logout'  => 'site/logout',`
     	* `'check'   => 'user/check',`
 
-**Checkpoint: <https://github.com/jsidhu/FuelJS/tree/cc71e41e8fc560a913b995cf385f727e6e2d0008>**
+****
+****
 
-### The frontend
-
+##Part 3: The Frontend  
 * Lets setup the Javascript code responsible for our frontend:
 	* Add `public/assets/js/login.js`
 	* Add `public/assets/js/main.js`
@@ -111,6 +104,39 @@ This is the documentation of a boilerplate framework I've used a few times now t
 	    * `home/sidebar.html`
 	    * `home/topbar.html`
 
-Thats it, should be working.
+****
+****
 
-Whats happening here?
+##Part 4: The Database
+
+* Create the database: Login to mysql and create database
+* Create the migration: `fuel/app/migrations/001_create_users.php`
+* Run the migration: `php oil refine migrate` (this will add an **admin/admin** account)
+
+Thats it.
+-----
+
+#Documentation
+
+I've used this formula for a few side projects now and everytime I've had to piece together the basic steps of starting a new project. Well, no more! I've documented the steps and dumped my thoughts on what I've done and why I've done it. Almoat all of my projects share these basic things: FuelPHP, MySQL, Backbone, Jquery, Bootstrap, etc.
+
+This prject here is intended to be a Boilerplate example of how to setup a project. I hate the boilerplate nametag being used here as much as anyon, but the project itself isn't intended to be one. Whats important here is that I've documented the steps required to setup this kind of a project and explained my intentions as well as the decisions made.  'm not a developer by trade so the loss of knowledge is quite common for me as I switch back and forth from my usual role to a develper role. 
+
+I've divided up this project into four main parts, here's a small description of what I intend to capture at each stage
+
+* Part 1 - The Project - This step establishes the base of our project. FuelPHP is downloaded and configured to run in your environment. We add the CSS and JS libs and other helper files that we'll be using/
+* Part 2 - The Backend - We configure FuelPHP, add the controllers and views required to render our site
+* Part 3 - The Frontend - This is where most of the JS magic happens. I've isolated all of the Javascript out to this section and I'm guessing a large writeup will be dedicated to it.
+* Part 4 - The Database - Here we finalize our system, create the tables and populate is using FuelPHP Migrations
+
+##Part 1: The Project
+##Part 2: The Backend
+##Part 3: The Frontend
+##Part 4: The Database
+
+## The Backend
+The backend consists of the following pieces:
+* the common controller: `fuel/app/classes/controller/common.php`
+* the site controller: 
+
+## The Frontend
