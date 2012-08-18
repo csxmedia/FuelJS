@@ -106,15 +106,12 @@ Since most of our pages will require the user to be authenticated, we're going t
 
 ```php
 class Controller_Common extends Controller_Hybrid {
-
     public function before()
     {
         parent::before();
-        
         if($this->request->controller == 'Controller_Site' && $this->request->action == 'login')
         {
             // Allow unathenticated requests for the login page
-
         }
         else if($this->request->controller == 'Controller_Site' && $this->request->action == 'check')
         {
