@@ -81,7 +81,7 @@ Next, copy the SimpleAuth implementation over to the app folder incase we need t
 >* Copy `fuel/packages/auth/classes/auth/group/simplegroup.php` to `fuel/app/classes/auth/group/simplrgroup.php`
 >* Copy `fuel/packages/auth/classes/auth/login/simpleauth.php` to `fuel/app/classes/auth/login/simplegroup.php`
     	
-The next step is to create the user [model](http://docs.fuelphp.com/general/models.html).
+The next step is to create the user [orm model](http://docs.fuelphp.com/packages/orm/creating_models.html).  Since we dont have any relations at the moment, all we need to do is fill the $_properties array with field names from our users table.
 
 ```php
 class Model_User extends Orm\Model {
@@ -101,6 +101,8 @@ class Model_User extends Orm\Model {
     );
 }
 ```
+
+
 	* Create the user model: `fuel/app/classes/model/user.php`
 	* Create a `Common` controller: `fuel/app/classes/controller/common.php`
 	* Add a new user controller by adding `fuel/app/classes/controller/user.php`
