@@ -102,8 +102,36 @@ class Model_User extends Orm\Model {
 }
 ```
 
+Since most of our pages will require the user to be authenticated, we're going to create a common controller which will be responsible for checking the authentication and all other controllers will/should extend this one. Let's Create a `Common` controller: `fuel/app/classes/controller/common.php`
 
-	* Create the user model: `fuel/app/classes/model/user.php`
+```php
+class Controller_Common extends Controller_Hybrid {
+
+    public function before()
+    {
+        parent::before();
+        
+        if($this->request->controller == 'Controller_Site' && $this->request->action == 'login')
+        {
+            // Allow unathenticated requests for the login page
+
+        }
+        else if($this->request->controller == 'Controller_Site' && $this->request->action == 'check')
+        {
+            // Allow unauthenticated login requests via post
+        }
+        else
+        {
+            if(! \Auth::check())
+            {
+                // user not logged in, send user to login page
+                Response::redirect('/login', 'refresh');
+            }
+        }
+    }
+}
+```
+
 	* Create a `Common` controller: `fuel/app/classes/controller/common.php`
 	* Add a new user controller by adding `fuel/app/classes/controller/user.php`
 	* Add a new controller: `fuel/app/classes/controller/site.php`
